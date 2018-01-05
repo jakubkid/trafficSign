@@ -1,0 +1,74 @@
+Feed forward color
+
+
+EPOCH 1 ...
+Validation Accuracy = 0.725
+
+EPOCH 2 ...
+Validation Accuracy = 0.882
+
+EPOCH 3 ...
+Validation Accuracy = 0.919
+
+EPOCH 4 ...
+Validation Accuracy = 0.924
+
+EPOCH 5 ...
+Validation Accuracy = 0.937
+
+Learning rate dropped to 0.0005
+EPOCH 6 ...
+Validation Accuracy = 0.936
+
+EPOCH 7 ...
+Validation Accuracy = 0.939
+
+EPOCH 8 ...
+Validation Accuracy = 0.939
+
+Learning rate dropped to 0.00025
+EPOCH 9 ...
+Validation Accuracy = 0.939
+
+EPOCH 10 ...
+Validation Accuracy = 0.942
+
+EPOCH 11 ...
+Validation Accuracy = 0.945
+
+Learning rate dropped to 0.000125
+EPOCH 12 ...
+Validation Accuracy = 0.944
+
+Learning rate dropped to 6.25e-05
+EPOCH 13 ...
+Validation Accuracy = 0.943
+
+EPOCH 14 ...
+Validation Accuracy = 0.944
+
+EPOCH 15 ...
+Validation Accuracy = 0.945
+
+Learning rate dropped to 3.125e-05
+EPOCH 16 ...
+Validation Accuracy = 0.943
+
+EPOCH 17 ...
+Validation Accuracy = 0.945
+
+Learning rate dropped to 1.5625e-05
+EPOCH 18 ...
+Validation Accuracy = 0.944
+
+EPOCH 19 ...
+Validation Accuracy = 0.945
+
+EPOCH 20 ...
+Validation Accuracy = 0.945
+
+Model saved
+
+Test Accuracy = 0.940
+Train Accuracy = 0.999
+
