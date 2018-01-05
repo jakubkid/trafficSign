@@ -1,63 +1,74 @@
 Gray scale
 
 EPOCH 1 ...
-Validation Accuracy = 0.353
+Validation Accuracy = 0.627
 
 EPOCH 2 ...
-Validation Accuracy = 0.606
+Validation Accuracy = 0.818
 
 EPOCH 3 ...
-Validation Accuracy = 0.668
+Validation Accuracy = 0.872
 
 EPOCH 4 ...
-Validation Accuracy = 0.749
+Validation Accuracy = 0.903
 
 EPOCH 5 ...
-Validation Accuracy = 0.756
+Validation Accuracy = 0.918
 
+Learning rate dropped to 0.0005
 EPOCH 6 ...
-Validation Accuracy = 0.801
+Validation Accuracy = 0.917
 
 EPOCH 7 ...
-Validation Accuracy = 0.818
+Validation Accuracy = 0.925
 
 EPOCH 8 ...
-Validation Accuracy = 0.818
+Validation Accuracy = 0.932
 
+Learning rate dropped to 0.00025
 EPOCH 9 ...
-Validation Accuracy = 0.831
+Validation Accuracy = 0.928
 
 EPOCH 10 ...
-Validation Accuracy = 0.832
+Validation Accuracy = 0.931
 
 EPOCH 11 ...
-Validation Accuracy = 0.845
+Validation Accuracy = 0.934
 
+Learning rate dropped to 0.000125
 EPOCH 12 ...
-Validation Accuracy = 0.850
+Validation Accuracy = 0.933
 
 EPOCH 13 ...
-Validation Accuracy = 0.848
+Validation Accuracy = 0.935
 
 EPOCH 14 ...
-Validation Accuracy = 0.850
+Validation Accuracy = 0.935
 
+Learning rate dropped to 6.25e-05
 EPOCH 15 ...
-Validation Accuracy = 0.856
+Validation Accuracy = 0.930
 
 EPOCH 16 ...
-Validation Accuracy = 0.862
+Validation Accuracy = 0.935
 
+Learning rate dropped to 3.125e-05
 EPOCH 17 ...
-Validation Accuracy = 0.869
+Validation Accuracy = 0.934
 
 EPOCH 18 ...
-Validation Accuracy = 0.866
+Validation Accuracy = 0.935
 
+Learning rate dropped to 1.5625e-05
 EPOCH 19 ...
-Validation Accuracy = 0.867
+Validation Accuracy = 0.935
 
 EPOCH 20 ...
-Validation Accuracy = 0.860
+Validation Accuracy = 0.935
 
 Model saved
+
+
+Test Accuracy = 0.919
+Train Accuracy = 0.996
+
