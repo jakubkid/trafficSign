@@ -12663,7 +12663,7 @@ rkJggg==
     <span class="c1"># Arguments used for tf.truncated_normal, randomly defines variables for the weights and biases for each layer</span>
     <span class="n">mu</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">sigma</span> <span class="o">=</span> <span class="mf">0.1</span>
-    <span class="c1"># Layer 1: Convolutional. Input = 32x32x3. Output = 28x28x6.</span>
+    <span class="c1"># Layer 1: Convolutional. Input = 32x32x1. Output = 28x28x6.</span>
     <span class="n">layer1Weights</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">))</span> <span class="c1"># grayscale</span>
     <span class="c1">#layer1Weights = tf.Variable(tf.truncated_normal([5,5,3,6], mu, sigma))</span>
     <span class="n">layer1Bias</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
