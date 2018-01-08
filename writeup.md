@@ -195,7 +195,7 @@ Here are the results of the prediction with RGB images:
 | Warning animal   		| Warning animal 				 				|
 | Warning right turn    | Warning right turn    	    				|
 
-Even though RGB validation accuracy was 0.942 (grayscale 0.952) it had troubles with dark images and detected wrongly 50kmh limit.
+For RGB image input accuracy was 80% (validation accuracy was 94.2%),it had troubles with dark images and detected wrongly 50kmh limit . For grayscale image input accuracy was 100% (validation accuracy was 95.2%)
 
 #### 3. Model certainty 
 First five softmax probabilities for grayscale images:
@@ -206,7 +206,7 @@ First five softmax probabilities for RGB images:
 
 ![First five softmax probabilities for RGB images][softmaxColor]
 
-From this plots it is visible that model is very sure for it detection when grayscale images are provided. For RGB images model is not certain and sometimes wrong when image is dark.
+From this plots it is visible that model is very sure for it detection when grayscale images are provided. For RGB images model is not certain and sometimes wrong when image is dark. 
 
 
 ### Visualizing the Neural Network 
