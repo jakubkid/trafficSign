@@ -76,7 +76,7 @@ My final model consisted of the following layers:
 
 #### 3. Model training
 
-To train the model, I used AdamOptimizer to minimize loss operation of training set. I set batch size to 128 and with 20 epochs. Learning rate was started with 0.001 and after each epoch it is halved if validation accuracy dropped. See log of training below:
+To train the model, I used AdamOptimizer to minimize loss operation of training set. I set batch size to 128 and with 20 epochs. Learning rate started with 0.001 and after each epoch it is halved if validation accuracy dropped. See log of training below:
 
 >EPOCH 1 ...
 >Validation Accuracy = 0.751
