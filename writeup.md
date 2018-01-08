@@ -8,11 +8,10 @@
 [ExampleSign]: ./raportPics/ExampleSign.png "Example Sign"
 [imagesComparison]: ./raportPics/imagesComparison.png "Images Comparison Test"
 [imagesComparisonTrainingSet]: ./raportPics/imagesComparisonTrainingSet.png "Images Comparison Training"
-[networkState]: ./raportPics/networkState.png "Network State 50"
 [softmaxColor]: ./raportPics/softmaxColor.png "Softmax Result Color Image"
 [softmaxGrayscale]: ./raportPics/softmaxGrayscale.png "Softmax Result Grayscale Image"
 [germanSigns]: ./raportPics/germanSigns.png "Softmax Result Grayscale Image"
-
+[networkState]: ./raportPics/networkState.png "network State"
 ---
 ### Reflection
 
