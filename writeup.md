@@ -11,12 +11,17 @@
 [networkState]: ./raportPics/networkState.png "Network State 50"
 [softmaxColor]: ./raportPics/softmaxColor.png "Softmax Result Color Image"
 [softmaxGrayscale]: ./raportPics/softmaxGrayscale.png "Softmax Result Grayscale Image"
+[20kmh]: ./20_0.ppm "20kmh"
+[30kmh]: ./30_1.ppm "30kmh"
+[50kmh]: ./50_2.ppm "50kmh"
+[animal]: ./animal_31.ppm "Animal"
+[turn]: ./turn_20.ppm "Turn"
 
 ---
 ### Reflection
 
 #### 1. README
-The aim of this project is to create algorith correctly detecting one of 43 german traffic signs usign Convolutional neural network [project code](https://github.com/jakubkid/trafficSign/blob/master/Traffic_Sign_Classifier.ipynb)
+The aim of this project is to create algorithm correctly detecting one of 43 German traffic signs using Convolutional neural network [project code](https://github.com/jakubkid/trafficSign/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ### Data Set Summary & Exploration
 
@@ -37,17 +42,17 @@ Here is an example sign from dataset
 
 ![Example Sign][ExampleSign]
 
-### Design and Test a Model Architecture
+### Design and Test Model Architecture
 
 #### 1. Preprocessing
 
 As a first step, I decided to convert the images to grayscale because from my experiments it produced better results. As a next step I normalized image to cover full range from 0 to 255
 
-Here is an example of a traffic sign image before and after grayscaling and normalization.
+Here is an example of a traffic sign image before and after gray scaling and normalization.
 
 ![Image preprocessing][imagesComparisonTrainingSet]
 
-As a last step, I normalized the(-1.0,-1,0) range to improve neutral network training.
+As a last step, I normalized the (-1.0,-1,0) range to improve neutral network training.
 
 
 #### 2. Model Architecture.
@@ -59,10 +64,10 @@ My final model consisted of the following layers:
 | Input         		| 32x32x1 Grayscale image   					| 
 | Convolution 5x5     	| 1x1 stride, same padding, outputs 28x28x6 	|
 | RELU					|												|
-| Max pooling 2x2      	| 2x2 stride,  outputs 14x14x6					|
+| Max pooling 2x2      	| 2x2 stride, outputs 14x14x6					|
 | Convolution 5x5	    | 1x1 stride, same padding, outputs10x10x16  	|
 | RELU					|												|
-| Max pooling 2x2      	| 2x2 stride,  outputs 5x5x16					|
+| Max pooling 2x2      	| 2x2 stride, outputs 5x5x16					|
 | Flatten Layer1&2		| 5x5x16+14x14x6 = 1576							|
 | Fully connected		| 1576->120    									|
 | RELU					|												|
@@ -72,74 +77,140 @@ My final model consisted of the following layers:
  
 
 
-#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### 3. Model training
 
-To train the model, I used an ....
+To train the model, I used AdamOptimizer to minimize loss operation of training set. I set batch size to 128 and with 20 epochs. Learning rate was started with 0.001 and after each epoch it is halved if validation accuracy dropped. See log of training below:
 
-#### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+>EPOCH 1 ...
+>Validation Accuracy = 0.751
+>
+>EPOCH 2 ...
+>Validation Accuracy = 0.876
+>
+>EPOCH 3 ...
+>Validation Accuracy = 0.918
+>
+>EPOCH 4 ...
+>Validation Accuracy = 0.928
+>
+>EPOCH 5 ...
+>Validation Accuracy = 0.934
+>
+>EPOCH 6 ...
+>Validation Accuracy = 0.937
+>
+>EPOCH 7 ...
+>Validation Accuracy = 0.938
+>
+>EPOCH 8 ...
+>Validation Accuracy = 0.943
+>
+>EPOCH 9 ...
+>Validation Accuracy = 0.949
+>
+>Learning rate dropped to 0.0005
+>EPOCH 10 ...
+>Validation Accuracy = 0.946
+>
+>EPOCH 11 ...
+>Validation Accuracy = 0.954
+>
+>Learning rate dropped to 0.00025
+>EPOCH 12 ...
+>Validation Accuracy = 0.952
+>
+>Learning rate dropped to 0.000125
+>EPOCH 13 ...
+>Validation Accuracy = 0.952
+>
+>Learning rate dropped to 6.25e-05
+>EPOCH 14 ...
+>Validation Accuracy = 0.950
+>
+>EPOCH 15 ...
+>Validation Accuracy = 0.951
+>
+>EPOCH 16 ...
+>Validation Accuracy = 0.952
+>
+>EPOCH 17 ...
+>Validation Accuracy = 0.952
+>
+>EPOCH 18 ...
+>Validation Accuracy = 0.952
+>
+>Learning rate dropped to 3.125e-05
+>EPOCH 19 ...
+>Validation Accuracy = 0.951
+>
+>EPOCH 20 ...
+>Validation Accuracy = 0.952
+>
+>Test Accuracy = 0.930
+>Train Accuracy = 1.000
+
+
+
+#### 4. Architecture
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* Training set accuracy of 1.000
+* Validation set accuracy of 0.952
+* Test set accuracy of 0.930
 
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+The way to final architecture:
+* Firstly slightly modified LeNet lab (RGB image input and 43 outputs instead of 10) was chosen 
+* This architecture was achieving results around 0.90
+* Replacing last RELU with sigmoid was enough to achieve 0.93
+* After reading about [example algorithm](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) feed forward from layer1 output to layer3 input was added which improved accuracy to 0.94
+* Modifying this model to accept normalized grayscale images improved accuracy to 0.95
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- 
 
-### Test a Model on New Images
+### New Images
 
-#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Selected signs.
 
 Here are five German traffic signs that I found on the web:
+![Speed limit 20kmh][20kmh] ![Speed limit 30kmh][30kmh] ![Speed limit 50kmh][50kmh] 
+![Warning animal][animal] ![Warning right turn][turn]
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+20kmh limit might be hard to detect because is captured together with other sign. 30kmh limit might be hard to detect because it is obscured with light. 50kmh limit animal and turn warning might be hard to detect because are very dark.
 
-The first image might be difficult to classify because ...
+#### 2. New images predictions
 
-#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+Here are the results of the prediction with grayscale images:
 
-Here are the results of the prediction:
+| Image			        |     Prediction	        					|
+|:---------------------:|:---------------------------------------------:|
+| Speed limit 20kmh 	| Speed limit 20kmh  							|
+| Speed limit 30kmh  	| Speed limit 30kmh 							|
+| Speed limit 50kmh		| Speed limit 50kmh								|
+| Warning animal   		| Warning animal 				 				|
+| Warning right turn    | Warning right turn    	    				|
 
-| Image			        |     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+Here are the results of the prediction with RGB images:
+
+| Image			        |     Prediction	        					|
+|:---------------------:|:---------------------------------------------:|
+| Speed limit 20kmh 	| Speed limit 20kmh  							|
+| Speed limit 30kmh  	| Speed limit 30kmh 							|
+| Speed limit 50kmh		| Speed limit 100kmh					    	|
+| Warning animal   		| Warning animal 				 				|
+| Warning right turn    | Warning right turn    	    				|
+
+Even though RGB validation accuracy was 0.942 (grayscale 0.952) it had troubles with dark images and detected wrongly 50kmh limit.
+
+#### 3. Model certainty 
+
+![First five softmax probabilities for grayscale images][softmaxGrayscale]
+
+![First five softmax probabilities for RGB images][softmaxColor]
+
+From this plots it is visible that model is very sure for it detection when grayscale images are provided. For RGB images model is not certain and sometimes wrong when image is dark.
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
-
-#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
-
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
-
-For the second image ... 
-
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
+### Visualizing the Neural Network 
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+![Layer 1 and layer 2 state for 50kmh limit][networkState]
 
-
+Layer 1 mainly detects edges and circles, layer 2 output is quite puzzling (black magic).
