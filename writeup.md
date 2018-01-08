@@ -11,11 +11,7 @@
 [networkState]: ./raportPics/networkState.png "Network State 50"
 [softmaxColor]: ./raportPics/softmaxColor.png "Softmax Result Color Image"
 [softmaxGrayscale]: ./raportPics/softmaxGrayscale.png "Softmax Result Grayscale Image"
-[20kmh]: ./20_0.ppm "20kmh"
-[30kmh]: ./30_1.ppm "30kmh"
-[50kmh]: ./50_2.ppm "50kmh"
-[animal]: ./animal_31.ppm "Animal"
-[turn]: ./turn_20.ppm "Turn"
+[germanSigns]: ./raportPics/germanSigns.png "Softmax Result Grayscale Image"
 
 ---
 ### Reflection
@@ -171,8 +167,7 @@ The way to final architecture:
 #### 1. Selected signs.
 
 Here are five German traffic signs that I found on the web:
-![Speed limit 20kmh][20kmh] ![Speed limit 30kmh][30kmh] ![Speed limit 50kmh][50kmh] 
-![Warning animal][animal] ![Warning right turn][turn]
+![German Signs][germanSigns]
 
 20kmh limit might be hard to detect because is captured together with other sign. 30kmh limit might be hard to detect because it is obscured with light. 50kmh limit animal and turn warning might be hard to detect because are very dark.
 
