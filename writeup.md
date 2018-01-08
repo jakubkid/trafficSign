@@ -5,13 +5,13 @@
 
 [//]: # (Image References)
 
-[ExampleSign]: ./raportPics/ExampleSign.png "Example Sign"
+[ExampleSign]: ./raportPics/ExampleSign.PNG "Example Sign"
 [imagesComparison]: ./raportPics/imagesComparison.png "Images Comparison Test"
 [imagesComparisonTrainingSet]: ./raportPics/imagesComparisonTrainingSet.png "Images Comparison Training"
 [softmaxColor]: ./raportPics/softmaxColor.png "Softmax Result Color Image"
 [softmaxGrayscale]: ./raportPics/softmaxGrayscale.png "Softmax Result Grayscale Image"
 [germanSigns]: ./raportPics/germanSigns.png "Softmax Result Grayscale Image"
-[networkState]: ./raportPics/networkState.png "network State"
+[networkState]: ./raportPics/networkState.PNG "network State"
 
 
 ---
@@ -204,7 +204,7 @@ First five softmax probabilities for grayscale images:
 
 First five softmax probabilities for RGB images:
 
-![First five softmax probabilities for RGB images][networkState]
+![First five softmax probabilities for RGB images][softmaxColor]
 
 From this plots it is visible that model is very sure for it detection when grayscale images are provided. For RGB images model is not certain and sometimes wrong when image is dark.
 
