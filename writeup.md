@@ -197,8 +197,11 @@ Here are the results of the prediction with RGB images:
 Even though RGB validation accuracy was 0.942 (grayscale 0.952) it had troubles with dark images and detected wrongly 50kmh limit.
 
 #### 3. Model certainty 
+First five softmax probabilities for grayscale images:
 
 ![First five softmax probabilities for grayscale images][softmaxGrayscale]
+
+First five softmax probabilities for RGB images:
 
 ![First five softmax probabilities for RGB images][softmaxColor]
 
@@ -206,7 +209,10 @@ From this plots it is visible that model is very sure for it detection when gray
 
 
 ### Visualizing the Neural Network 
-#### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+#### 1. Network internal state
+
+Layer 1 and layer 2 state for 50kmh limit:
+
 ![Layer 1 and layer 2 state for 50kmh limit][networkState]
 
 Layer 1 mainly detects edges and circles, layer 2 output is quite puzzling (black magic).
