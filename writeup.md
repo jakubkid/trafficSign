@@ -204,7 +204,7 @@ First five softmax probabilities for grayscale images:
 
 First five softmax probabilities for RGB images:
 
-![First five softmax probabilities for RGB images][softmaxColor]
+![First five softmax probabilities for RGB images][networkState]
 
 From this plots it is visible that model is very sure for it detection when grayscale images are provided. For RGB images model is not certain and sometimes wrong when image is dark.
 
@@ -216,4 +216,4 @@ Layer 1 and layer 2 state for 50kmh limit:
 
 ![network State][networkState]
 
-Layer 1 mainly detects edges and circles, layer 2 output is quite puzzling (black magic).
+Layer 1 mainly detects edges and circles, layer 2 output is quite puzzling.
