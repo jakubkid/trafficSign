@@ -167,6 +167,7 @@ The way to final architecture:
 #### 1. Selected signs.
 
 Here are five German traffic signs that I found on the web:
+
 ![German Signs][germanSigns]
 
 20kmh limit might be hard to detect because is captured together with other sign. 30kmh limit might be hard to detect because it is obscured with light. 50kmh limit animal and turn warning might be hard to detect because are very dark.
