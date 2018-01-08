@@ -12,6 +12,8 @@
 [softmaxGrayscale]: ./raportPics/softmaxGrayscale.png "Softmax Result Grayscale Image"
 [germanSigns]: ./raportPics/germanSigns.png "Softmax Result Grayscale Image"
 [networkState]: ./raportPics/networkState.png "network State"
+
+
 ---
 ### Reflection
 
