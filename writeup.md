@@ -213,6 +213,6 @@ From this plots it is visible that model is very sure for it detection when gray
 
 Layer 1 and layer 2 state for 50kmh limit:
 
-![Layer 1 and layer 2 state for 50kmh limit][networkState]
+![network State][networkState]
 
 Layer 1 mainly detects edges and circles, layer 2 output is quite puzzling (black magic).
